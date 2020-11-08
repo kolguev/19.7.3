@@ -13,4 +13,4 @@ def test_get_all_pets_with_valid_key(filter=''):
     _, auth_key = pf.get_api_key(valid_email, valid_password)
     status, result = pf.get_list_of_pets(auth_key['key'], filter)
     assert status == 200
-    assert result len(result['pets']) > 0
+    assert len(result['pets']) > 0
